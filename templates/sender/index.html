@@ -1,0 +1,20 @@
+{% extends "sender/base.html" %}
+{% load bootstrap3 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="jumbotron">
+	
+<h1>Fill this form and get a nice message</h1>
+</div>
+<div class="container">
+<form method="POST" class="myform">
+{% csrf_token %}
+{% crispy form %}
+{# <input class="btn btn-primary md" type="submit" value="Submit" /> #}
+</form>
+</div>
+
+
+{% endblock %}
